@@ -1,5 +1,7 @@
 from datetime import datetime
 
+listaEventos = []
+
 def displayMenu(): 
     print("=== Planejador de Eventos do Campus ===")
     print("1. Adicionar Evento")    
@@ -43,7 +45,7 @@ def adicionarEvento(listaEventos, nome, data, local, categoria):
     return True
 
 
-listaEventos = []
+
 
 
 adicionarEvento(
