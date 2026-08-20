@@ -11,6 +11,16 @@ def displayMenu():
     print("5. Gerar Relatório")
     print("6. Sair")
 
+def getEscolhaDoUsuario():
+    while (True):
+        escolha = input()
+        if (1 <= escolha <= 6):
+            break
+        else:
+            print("Alternativa inválida")
+            displayMenu()
+    return escolha
+
 def validarData(dataStr):
     try:
         datetime.strptime(dataStr, "%Y-%m-%d")
@@ -43,7 +53,6 @@ def adicionarEvento(listaEventos, nome, data, local, categoria):
     listaEventos.append(evento)
 
     return True
-
 
 
 
