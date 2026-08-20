@@ -21,7 +21,17 @@ def getEscolhaDoUsuario():
             displayMenu()
     return escolha
 
-def validarData(dataStr):
+def filtrarEventosPorCategoria(listaEventos, categoria):
+    resultado = []
+    for evento in listaEventos:
+        if (evento.categoria == categoria):
+            resultado.append(evento)
+
+    return resultado
+
+
+
+def validarData():
     try:
         datetime.strptime(dataStr, "%Y-%m-%d")
         return True
